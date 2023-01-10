@@ -5,6 +5,7 @@ const userInput = document.querySelector('input');
 const title = document.querySelector('title');
 const brand = document.querySelector('.navbar-brand');
 const room = document.getElementById('room-display-container').firstChild;
+const foot = document.querySelector('footer');
 
 room.textContent = `Welcome to ${gameDetails.title}! ${gameDetails.startingRoomDescription}`;
 
@@ -33,6 +34,20 @@ const mainDisplay = () => {
         `;
 
     desc.textContent = gameDetails.desc;
+    
+    let commandDisplay = document.createElement('p');
+
+    commandDisplay.textContent = `Commands: `
+
+    gameDetails.playerCommands.map(e => {
+        let b = document.createElement('b');
+
+        b.textContent = `${e} | `;
+        commandDisplay.appendChild(b);
+    });
+
+    foot.appendChild(commandDisplay);
+
 }
 
 const displayRooms = () => {
