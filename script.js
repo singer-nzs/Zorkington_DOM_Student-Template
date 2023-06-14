@@ -27,7 +27,7 @@ export const gameDetails = {
     // This shouldn't be more than 6-8 different commands.
 }
 
-// You code here
+// Your code here
 
 export const domDisplay = (playerInput) => {
     /* 
